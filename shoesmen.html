@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 5 Website - GCJ</title>
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style>
+        .centered-image {
+            display: block;
+            max-width: 100%; 
+            max-height: 70%; 
+            margin: auto; 
+        }
+
+
+
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+
+        li.navitem {
+            float: left;
+        }
+
+        li.navitem a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: italic;
+            text-transform: uppercase;
+            line-height: 1.5;
+            letter-spacing: 4px;
+            word-spacing: 4px;
+            text-align: center;
+            color: whitesmoke;
+        }
+
+        li.navitem a:hover {
+            background-color: #666;
+        }
+
+        .dropdown > a[href='men.html'] {
+        color: whitesmoke;
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: italic;
+        text-transform: uppercase;
+        line-height: 1.5;
+        letter-spacing: 4px;
+        word-spacing: 4px;
+        text-align: center;
+        }
+
+        .dropdown > a[href='women.html'] {
+        color: whitesmoke;
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: italic;
+        text-transform: uppercase;
+        line-height: 1.5;
+        letter-spacing: 4px;
+        word-spacing: 4px;
+        text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margint-top: 20px;
+            font-family: arial;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            background-color:#333;
+            color: white;
+        }
+
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+            justify-content: space-evenly;
+            margin: 20px;
+        }
+
+        .T-shirts img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .shoesmen img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .button-add-to-cart {
+    background-color: darkgrey; 
+    color: white; 
+    border: 2px solid #ddd; 
+    padding: 10px 15px;
+    font-size: 0.75em;
+    font-family: arial;
+    text-transform: none; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.button-add-to-cart:hover {
+    background-color: lightseagreen;
+}
+
+
+.dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 16px;    
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #666;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+        .footer-container {
+            flex-shrink: 0;
+            width: 100%;
+            padding: 20px;
+            color: #333;
+            background-color: darkgrey;
+            clear: both;
+        }
+
+
+    .bottom-line {
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
+
+    .footer-content {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+        }
+
+    .footer-column {
+            flex: 1;
+            padding: 0 20px;
+        }
+        .footer-column h3 {
+            margin-bottom: 10px;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #333;
+            line-height: 2.5;
+        }
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+}
+
+    </style>
+</head>
+
+
+<body>
+
+
+<header class ="header">
+    <div id="callout">
+        <p><b> Free Shipping Standard on all orders</b></p>
+    </div>
+    
+    <ul class="navbar">
+        <li class="navitem" ><a href="Index.html"> <img src="JCG01.png" alt="home" width="75px"> </a></li>
+
+        <li class="dropdown">
+            <a href="men.html" >Men</a>
+            <div class="dropdown-content">
+            <a href="shoesmen.html">Shoes</a>
+            <a href="menaccess.html">Accessories</a>
+        </div>
+
+
+        </li>
+
+        <li class="dropdown">
+            <a href="women.html">Women</a>
+            <div class="dropdown-content">
+            <a href="shoes.html">Shoes</a>
+            <a href="access.html">Accessories</a>
+        </div>
+
+
+        <li class="navitem"><a href="AboutUs.html">About us</a></li>
+    </ul>
+ <img src="menshoes.png"  class="centered-image"/>
+
+</header>
+
+
+<table border="1" style="width: 100%; text-align: center; margin-top: 20px;">
+        <tr>
+            <th>NEW SEASON ARRIVALS THIS WEEK</th>
+        </tr>
+    <div class="container">
+
+        <div class="shoesmen">
+            <img src="https://www.dkny.com/media/catalog/product/d/g/dg3s0025_dg3s0025c01.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="shoesmen 1">
+            <h2>Trekking Sneaker</h2>
+            <p>Color: Black</p>
+            <p>Price: $89.00</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="shoesmen">
+            <img src="https://www.dkny.com/media/catalog/product/d/g/dg3s0026_dg3s0026c01.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="shoesmen 2">
+            <h2>Mixed Media High Top</h2>
+            <p>Color: Black</p>
+            <p>Price: $119.00</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="T-shirts">
+            <img src="https://www.dkny.com/media/catalog/product/d/g/dg3b0023_dg3b0023cgrn.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=624&width=455&canvas=455:624" alt="shoesmen 3">
+            <h2>Side Zip Lace Up Boot</h2>
+            <p>Color: Green</p>
+            <p>Price: $129.90</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="T-shirts">
+            <img src="https://www.dkny.com/media/catalog/product/d/g/dg3b0025_dg3b0025c32.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="shoesmen 4">
+            <h2>Wingtip Lug Sole Boot</h2>
+            <p>Color: Brown</p>
+            <p>Price: $129.00</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="shoesmen">
+            <img src="https://www.dkny.com/media/catalog/product/k/z/kzd23f01_kzd23f01clem_v3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="Tshirt 5">
+            <h2>Lemon Flip Flop</h2>
+            <p>Color: Lemon</p>
+            <p>Price: $15.00</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+
+       <div class="Footer-container">
+        <hr class="top-line">
+        <div class="footer-content">
+        <div class="footer-column">
+            <h3>CUSTOMER SERVICE</h3>
+            <ul>
+                <li><a href="https://www.ralphlauren.com/accountlogin?original=%2Faccount">My Account</a></li>
+                <li><a href="https://www.ralphlauren.com/support">Live Chat</a></li>
+                <li><a href="https://www.ralphlauren.com/support">Customer Support</a></li>
+                <li><a href="https://www.ralphlauren.com/support?a=Shipping-Options-and-Delivery-Costs---id--Bf908h3CQ9mgVeeHT0g21g">Holiday Shipping & Delivery</a></li>
+                <li><a href="https://www.ralphlauren.com/support?a=Return-Policy-and-Timing---id--XQjSJDtDQnu81JuT4jv6xA">Extended Holiday Return Policy</a></li>
+                <li><a href="https://www.ralphlauren.com/returns?cid=cs-start-a-return">Start a Free Return or Exchange</a></li>
+                <li><a href="https://www.ralphlauren.com/giftcertpurchase?virtualgc=true&webcat=footer">Gift Card</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>COMPANY</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="https://careers.ralphlauren.com/?_ga=2.86472856.1492936858.1702180012-738821528.1702180006&_gac=1.155282746.1702312451.0da26759e2311f62a625022edba2b8e6">Careers</a></li>
+                <li><a href="https://www.ralphlauren.com/rl-50-about-ralph-feat">World of RL</a></li>
+                <li><a href="https://corporate.ralphlauren.com/protecting-our-brands?_ga=2.51802281.1492936858.1702180012-738821528.1702180006&_gac=1.186140200.1702312451.0da26759e2311f62a625022edba2b8e6">Proctecting Our Brand</a></li>
+                <li><a href="https://www.ralphlauren.com/timelessbydesign">Global Citizenship & Sustainability</a></li>
+                <li><a href="https://www.ralphlauren.com/support?a=Satisfaction-Guarantee---id--acqV7aYUS7mIaq3R3fHkzA&cid=products-satisfaction-guarantee">Satisfaction Guarantee</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>MORE FROM RL</h3>
+            <ul>
+                <li><a href="https://www.ralphlauren.com/mystyle">Personalize Your Experience</a></li>
+                <li><a href="https://www.ralphlauren.com/stores">Find a Store</a></li>
+                <li><a href="https://www.ralphlauren.com/customerservice?cid=cs-mobile-marketing">Mobile Marketing</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>SIGN UP FOR EMAILS</h3>
+            <form>
+                <input type="email" id="email-signup" name="email" placeholder="Enter your email" required>
+                <button type="submit" class="signup-button">Subscribe</button>
+            </form>
+        </div>
+    </div><hr class="bottom-line">
+
+
+</body>
+</html>
+

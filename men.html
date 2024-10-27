@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML 5 Website - GCJ</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #ebebeb;
+        }
+    
+.centered-image {
+            display: block;
+            margin: auto;
+            max-width: 100%; 
+            max-height: 70%;
+            height: auto; 
+        }
+
+    
+    ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+
+        li.navitem {
+            float: left;
+        }
+
+        li.navitem a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: italic;
+            text-transform: uppercase;
+            line-height: 1.5;
+            letter-spacing: 4px;
+            word-spacing: 4px;
+            text-align: center;
+            color: whitesmoke;
+        }
+
+        li.navitem a:hover {
+            background-color: #666;
+        }
+
+        .dropdown > a[href='men.html'] {
+            color: whitesmoke;
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: italic;
+        text-transform: uppercase;
+        line-height: 1.5;
+        letter-spacing: 4px;
+        word-spacing: 4px;
+        text-align: center;
+        }
+
+        .dropdown > a[href='women.html'] {
+        color: whitesmoke;
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: italic;
+        text-transform: uppercase;
+        line-height: 1.5;
+        letter-spacing: 4px;
+        word-spacing: 4px;
+        text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margint-top: 20px;
+            font-family: arial;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            background-color:#333;
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+            justify-content: space-evenly;
+            margin: 20px;
+        }
+
+        .T-shirts img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .shoe img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .button-add-to-cart {
+            background-color: darkgrey; 
+            color: white; 
+            border: 2px solid #ddd; 
+            padding: 10px 15px;
+            font-size: 0.75em;
+            font-family: arial;
+            text-transform: none; 
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;}
+
+            .button-add-to-cart:hover {
+                background-color: limegreen;
+            }
+
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: #666;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+
+    .main-container {
+        display: flex; 1;
+    }
+
+
+    .link-table-container {
+                flex: 0 0 200px;
+                margin-right: 20px;
+            }
+    
+    .link-table {
+                margin-right: 20px;
+                border-collapse: collapse;
+                width:auto;
+            }
+            .link-table td, .link-table th {
+                border: none;
+                padding: 8px;
+                font-size: 1em;
+                text-align: left;
+                background-color: #black;
+                width: 150px;
+            }
+
+            .link-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0; 
+                background-color: #333;
+                color: white;
+                font-family: Arial, sans-serif; 
+            }
+            .link-table th, .link-table td {
+                padding: 12px 16px; 
+                border: 1px solid #ddd;
+            }
+
+            .link-table th {
+                background-color: #666; 
+                font-size: 18px; 
+                font-weight: bold;
+            }
+            .link-table td a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .link-table td a:hover {
+                color: #ccc;
+                text-decoration: underline;
+            }
+
+    .background-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .background-table td {
+                background-image: url('https://imagena1.lacoste.com/dw/image/v2/AAUP_PRD/on/demandware.static/-/Library-Sites-LacosteContent/default/dwcb840763/FW23/SAS/windowD.jpg?imwidth=1905&impolicy=custom');background-size: cover;
+                height: 300px;
+                text-align: left; 
+                vertical-align: bottom;
+                padding: 20px;
+            }
+
+        .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 20px;
+            }
+
+        
+            .T-shirts {
+                text-align: center;
+                background-color: #f8f8f8;
+                padding: 10px;
+            }
+
+            .T-shirts h2, .T-shirts p {
+                font-size: 0.9em;
+                color: #333;
+            }
+
+            .background-table td {
+                background-image: url('https://imagena1.lacoste.com/dw/image/v2/AAUP_PRD/on/demandware.static/-/Library-Sites-LacosteContent/default/dwcb840763/FW23/SAS/windowD.jpg?imwidth=1905&impolicy=custom');background-size: cover;
+                height: 300px;
+                text-align: center; 
+                vertical-align: middle;
+                position: relative;
+            }
+            .sale-offer {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .sale-text-big {
+                display: block;
+                font-size: 36px;
+                color: white;
+                margin-bottom: 0.5em;
+            }
+            .sale-text-small {
+                display: block;
+                font-size: 24px;
+                color: white;
+                margin-bottom: 1em;
+            }
+
+            .button-sale {
+                background-color: darkgrey;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+            }
+            .button-sale:hover {
+                background-color: limegreen;
+            }
+
+            .button-sale-link :{
+                text-decoration: none;
+            }
+        }
+
+
+.footer-container {
+            flex-shrink: 0;
+            width: 100%;
+            padding: 20px;
+            color: #333;
+            background-color: darkgrey;
+            clear: both;
+    }
+
+
+    .bottom-line {
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
+
+    .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    .footer-column {
+            flex: 1;
+            padding: 0 20px;
+        }
+        .footer-column h3 {
+            margin-bottom: 10px;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #333;
+            line-height: 2.5;
+        }
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+    .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+    </style>
+</head>
+
+
+
+<body>
+    <header class ="header">
+        <div id="callout">
+        <p><b> Free Shipping Standard on all Orders</b></p></div>
+
+        <ul class="navbar">
+            <li class="navitem" ><a href="Index.html"> <img src="JCG01.png" alt="home" width="75px"> </a></li>
+
+            <li class="dropdown">
+            <a href="men.html" >Men</a>
+            <div class="dropdown-content">
+            <a href="shoesmen.html">Shoes</a>
+            <a href="menaccess.html">Accessories</a>
+        </div></li>
+
+        <li class="dropdown">
+            <a href="women.html" >Women</a>
+            <div class="dropdown-content">
+            <a href="shoes.html">Shoes</a>
+            <a href="access.html">Accessories</a>
+        </div>
+
+        <li class="navitem"><a href="AboutUs.html">About us</a></li>
+     </ul>
+
+
+     <img src="https://cdn-fsly.yottaa.net/5e18d625d9314057054ee33e/www.ralphlauren.com/v~4b.e9/on/demandware.static/-/Library-Sites-RalphLauren_NA_Library/en_US/v1702120366046/img/202311/20231128-men-winter-alpine-lp/1128_m_polo_winter_alpine_lp_c01_img.jpg?yocs=kQ_l8_kX_kY_" alt="Promotional Offer" class="centered-image"/>
+
+     <table border="1" style="width: 100%; text-align: center; margin-top: 20px;">
+        <tr>
+            <th>NEW SEASON ARRIVALS THIS WEEK</th>
+        </tr>
+    </table>
+
+</header>
+
+<table class="background-table">
+    <tr>
+        <td>
+            <div class="sale-offer">
+                <span class="sale-text-big">SEMI-ANNUAL SALE</span>
+                <span class="sale-text-small">UP TO 50% OFF</span>
+                <a href="ruta-a-tu-destino.html" class="button-sale-link">
+    <button class="button-sale">SHOP NOW</button>
+</a>
+            </div>
+        </td> 
+    </tr>
+ </table>
+
+<div class="main-container">
+    <div class="container">
+        <div class="T-shirts">
+            <img src="https://www.dkny.com/media/catalog/product/m/4/m4370002_m4370002c01.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960">
+            <h2>Lunar XSX Hoodie</h2>
+            <p>Color: Black</p>
+            <p>Save 12% OFF</p>
+            <p>Price: $99.00</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="T-shirts">
+            <img src="https://www.dkny.com/media/catalog/product/m/4/m4210104_m4210104c61a.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="Tshirt 2">
+            <h2>FairIsle D N Y Tee</h2>
+            <p>Color: Red</p>
+            <p>Save 12% OFF</p>
+            <p>Price: $49.00</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="T-shirts">
+            <img src="https://www.dkny.com/media/catalog/product/m/4/m4202201_m4202201c827.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="Tshirt 3">
+            <h2>FairL Isle Sweat</h2>
+            <p>Color: Multi Christmas</p>
+            <p>Save 12% OFF</p>
+            <p>Price: $55.90</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="T-shirts">
+            <img src="https://www.dkny.com/media/catalog/product/m/3/m3331033_m3331033cblw.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="Tshirt 4">
+            <h2>Long Jacket Berg</h2>
+            <p>Color: Black/White</p>
+            <p>Save 12% OFF</p>
+            <p>Price: $299.00</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="T-shirts">
+            <img src="https://www.dkny.com/media/catalog/product/m/3/m3372210_m3372210cppl.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="Tshirt 5">
+            <h2>Plaid Sherp Jacket</h2>
+            <p>Color: Purple</p>
+            <p>Save 12% OFF</p>
+            <p>Price: $189.90</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="T-shirts">
+            <img src="https://www.dkny.com/media/catalog/product/d/x/dx3mn895_blk_alt1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="Tshirt 6">
+            <h2>Stand Collar Quilted Puffer</h2>
+            <p>Color: Black</p>
+            <p>Save 12% OFF</p>
+            <p>Price: $195.00</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="T-shirts">
+            <img src="https://www.dkny.com/media/catalog/product/m/2/m2361123_m2361123c01.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="Tshirt 6">
+            <h2>Quarter Zip Sport Polo</h2>
+            <p>Color: Black</p>
+            <p>Save 12% OFF</p>
+            <p>Price: $69.90</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="T-shirts">
+            <img src="https://www.dkny.com/media/catalog/product/d/x/dx3mp885_dx3mp885c03.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="Tshirt 6">
+            <h2>Mid-Length Walking Parka</h2>
+            <p>Color: Grey</p>
+            <p>Save 12% OFF</p>
+            <p>Price: $275.90</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+        <div class="T-shirts">
+            <img src="https://www.dkny.com/media/catalog/product/m/1/m1410038_m1410038c01.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=960&width=700&canvas=700:960" alt="Tshirt 6">
+            <h2>Slanted Logo Tee</h2>
+            <p>Color: Black</p>
+            <p>Save 12% OFF</p>
+            <p>Price: $39.90</p>
+            <button class="button-add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="Footer-container">
+        <hr class="top-line">
+        <div class="footer-content">
+        <div class="footer-column">
+            <h3>CUSTOMER SERVICE</h3>
+            <ul>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Live Chat</a></li>
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">Holiday Shipping & Delivery</a></li>
+                <li><a href="#">Extended Holiday Return Policy</a></li>
+                <li><a href="#">Start a Free Return or Exchange</a></li>
+                <li><a href="#">Gift Card</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>COMPANY</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">World of RL</a></li>
+                <li><a href="#">Proctecting Our Brand</a></li>
+                <li><a href="#">Global Citizenship & Sustainability</a></li>
+                <li><a href="#">Satisfaction Guarantee</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>MORE FROM RL</h3>
+            <ul>
+                <li><a href="#">Personalize Your Experience</a></li>
+                <li><a href="#">Find a Store</a></li>
+                <li><a href="#">Dowload the App</a></li>
+                <li><a href="#">Mobile Marketing</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>SIGN UP FOR EMAILS</h3>
+            <form>
+                <input type="email" id="email-signup" name="email" placeholder="Enter your email" required>
+                <button type="submit" class="signup-button">Subscribe</button>
+            </form>
+        </div>
+    </div><hr class="bottom-line">
+</body>
+
+
+</html>
+
